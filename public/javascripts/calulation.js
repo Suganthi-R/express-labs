@@ -1,8 +1,7 @@
 
 
 function interest()
-{    
-	
+{
 	let p = parseFloat(document.getElementById('principal amount').value);
 	let r = parseFloat(document.getElementById('rate of interest').value);
 	let n = parseFloat(document.getElementById('no of pay').value);
@@ -14,12 +13,9 @@ function interest()
 	if(validate(p,y,z)){
 	var x = p * (y * Math.pow(1 + y, z)) / (Math.pow(1 + y, z) - 1)
 
-	document.getElementById('result').value = tocurrency(x);
+	document.getElementById('result').value= tocurrency(x);
 	return true;
 	}
-
-
-
 
 function tocurrency(passedVal) {
 	dollarsym = "$ "
