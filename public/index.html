@@ -14,112 +14,158 @@
 </head>
 
 <body>
-
-<section id=navbar>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Financial Calculators
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#ac">Amortization Calculator</a>
-            <a class="dropdown-item" href="#fv">Future Value Calculator</a>
-          </div>
-        </li>
-    </div>
-  </nav>
-</section>
-  <section id="ac">
-  <div class="card border-light  " style="align-content: center;width: 90%;padding-top: 75px;">
-    <div style="margin:  0 auto;">
-      <div class="card-header  text-center" style="background-color:#3b4e87; ">
-        <span style="color:white"> Amortization Payment Calculator</span>
+  <div>
+    <section id="HR">
+      <h6 style="text-align: center;font-weight:bolder ;font-size:40px;">Financial Calculators</h6>
+      <div style="text-align:center; ">
+        <select class="form-select" aria-label="Default select example"id="options" onchange="display()">
+          <option selected>Select calculator type</option>
+          <option value="1">Amortization Calculator</option>
+          <option value="2">Future Value Calculator</option>
+          <option value="3">CAGR Calculator</option>
+        </select>
       </div>
-      <div class="card-body  bg-light  ">
-
-        <div>
-          <p style=" float:left;">Loan Amount,<span style="font-weight: bold;font-style: italic;"> P</span></p>
-
-          <input style=" float:right;" type="text" id="principal amount" name="Pa" style="width: 150px;" >
-
-        </div><br><br>
-        <div>
-          <p style=" float:left;">Interest Rate,<span style="font-weight: bold;font-style: italic;"> r </span></p>
-
-          <input style=" float:right;" type="text" id="rate of interest" name="ra" style="width: 150px;">
-        </div><br><br>
-        <div>
-          <p style=" float:left;">Number of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
-
-          <input style=" float:right;" type="text" id="no of pay" name="No" style="width: 150px;" >
+    </section>
+    <section style="padding-top: 50px;">
+      <div  id="AC" class="card text-center " style="width: 26rem;margin: 0 auto;">
+        <div class="card-header">
+          Amortization Payment Calculator
         </div>
-        <br><br>
-        <div style="text-align: center;">
-          <button type="button" onclick="interest()">
-            Calculate
-          </button>
-        </div>
-        <br>
-        <div>
-          <p style=" float:left;">Payment Amount,<span style="font-weight: bold;font-style: italic;"> A</span></p>
-          <input style=" float:right;" type="text" id="result" name="Am" style="width: 150px;">
-        </div>
+        <div class="card-body">
+          <div>
+            <p style=" float:left;">Loan Amount,<span style="font-weight: bold;font-style: italic;"> P</span></p>
 
-      </div>
-    </div>
-  </div>
-  </section>
+            <input style=" float:right;" type="text" id="principal amount" name="Pa" style="width: 150px;">
 
-
-<section id=fv>
-
-  <div class="card border-light " style="align-content: center;width: 90%;padding-top: 75px;">
-    <div style="margin:  0 auto;">
-      <div class="card-header  text-center" style="background-color:#3b4e87; ">
-        <span style="color:white"> Future Value Calculator</span>
-      </div>
-      <div class="card-body  bg-light  ">
-
-        <div>
-          <p style=" float:left;">Number of Periods,(N)</p>
-
-          <input style=" float:right;border-color: blue;" type="text" id="noofperiods" name="Peo" style="width: 150px;" >
-
-        </div><br><br>
-        <div>
-            <p style=" float:left;">Amount</p>
-
-            <input style=" float:right;border-color: blue;" type="text" id="amount" name="Sat" style="width: 125px;"value="$" >
           </div><br><br>
-        <div>
-          <p style=" float:left;">Interest Rate,(I/Y)</p>
+          <div>
+            <p style=" float:left;">Interest Rate,<span style="font-weight: bold;font-style: italic;"> r </span></p>
 
-          <input style=" float:right;text-align: right;border-color: blue;" type="text" id="rate" name="ra" style="width: 125px;"value="%">
-        </div><br><br>
+            <input style=" float:right;" type="text" id="rate of interest" name="ra" style="width: 150px;"
+              placeholder="in %">
+          </div><br><br>
+          <div>
+            <p style=" float:left;">Number of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
 
-        <div style="text-align: center;">
-          <button type="button" onclick="finterest()" style="background-color: cornflowerblue;">
-            Calculate<i style="padding-left: 10px;"class="fas fa-chevron-circle-right"></i>
-          </button>
+            <input style=" float:right;" type="text" id="no of pay" name="No" style="width: 150px;"
+              placeholder="in years">
+          </div>
+          <br><br>
+          <div style="text-align: center;">
+            <button type="button" onclick="Amortization()">
+              Calculate
+            </button>
+          </div>
+          <br>
+
         </div>
-        <br>
-        <div>
-          <p style=" float:left;">Result</p>
+        <div class="card-footer">
+          <div>
+            <p style=" float:left;">Payment Amount,<span style="font-weight: bold;font-style: italic;"> A</span></p>
+            <input style=" float:right;" type="text" id="result" name="Am" style="width: 150px;">
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <input style=" float:right;" type="text" id="result1" name="re" style="width: 125px;">
-        </div><br><br>
+
+
+   
+      <section  style="padding-top: 50px;">
+        <div id="FV" class="card text-center " style="width: 26rem;margin: 0 auto;">
+          <div class="card-header">
+           Future Value Calculator
+          </div>
+          <div class="card-body    ">
+
+            
+            <div>
+              <p style=" float:left;">Amount</p>
+
+              <input style=" float:right;" type="text" id="amount" name="Sat" style="width: 125px;">
+            </div><br><br>
+            <div>
+              <p style=" float:left;">Interest Rate,(I/Y)</p>
+
+              <input style=" float:right;" type="text" id="rate" name="ra"
+                style="width: 125px;" placeholder="in %">
+            </div><br><br>
+            <div>
+              <p style=" float:left;">Number of Periods,(N)</p>
+
+              <input style=" float:right;" type="text" id="noofperiods" name="Peo"
+                style="width: 150px;" placeholder="in years">
+
+            </div><br><br>
+            <div style="text-align: center;">
+              <button type="button" onclick="futurevalue()" >
+                Calculate<i style="padding-left: 10px;" class="fas fa-chevron-circle-right"></i>
+              </button>
+            </div>
+          
+          </div>
+      
+        <div class="card-footer">
+          <div>
+            <p style=" float:left;">Result</p>
+
+            <input style=" float:right;" type="text" id="result1" name="re" style="width: 125px;">
+          </div>
+       
+
+        </div>
+
+        </div>
+    </section>
+    
+  <section style="padding-top: 50px;">
+      <div   id="CR" class="card text-center " style="width: 26rem;margin: 0 auto;">
+        <div class="card-header">
+        CAGR Calculator
+        </div>
+        <div class="card-body    ">
+
+          
+          <div>
+            <p style=" float:left;">Beginning Value</p>
+
+            <input style=" float:right;" type="text" id="bvalue" name="Sat" style="width: 125px;">
+          </div><br><br>
+          <div>
+            <p style=" float:left;">Ending Value</p>
+
+            <input style=" float:right;" type="text" id="evalue" name="ra"
+              style="width: 125px;" >
+          </div><br><br>
+          <div>
+            <p style=" float:left;">Number of Periods,(N)</p>
+
+            <input style=" float:right;" type="text" id="noperiods" name="Peo"
+              style="width: 150px;" placeholder="in years">
+
+          </div><br><br>
+          <div style="text-align: center;">
+            <button type="button" onclick="cagrcalci()" >
+              Calculate<i style="padding-left: 10px;" class="fas fa-chevron-circle-right"></i>
+            </button>
+          </div>
+        
+        </div>
+    
+      <div class="card-footer">
+        <div>
+          <p style=" float:left;">CAGR VALUE </p>
+
+          <input style=" float:right;" type="text" id="result2" name="re" style="width: 125px;">
+        </div>
+     
 
       </div>
-    </div>
-  </div>
 
-</section>
+      </div>
+  </section>
+->
+  </div>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -130,7 +176,7 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
   <script src="javascripts/calulation.js"></script>
-  <script src="javascripts/fcalculation.js"></script>
+  <script src="javascripts/show.js"></script>
   <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
