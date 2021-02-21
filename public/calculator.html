@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
 
             <div class="col-12">
@@ -24,7 +24,7 @@
             <div class="row mx-auto">
                 <div class="col pt-3">
                     <select class="custom-select" onchange="display()" id="options">
-                        <option selected>Select Calculator type</option> 
+                        <option selected>Select Calculator type</option>
                         <option value="1">Amortization Calculator</option>
                         <option value="2">Future Value Calculator</option>
                         <option value="3">CAGR Calculator</option>
@@ -34,11 +34,11 @@
         </div>
 
 
-            <div class="row pt-3" id="AC" style="display: none;">
-            <div class="col-6 mx-auto">
+        <div class="row pt-3" id="AC" style="display: none;">
+            <div class="col-12 mx-auto">
                 <div class="card text-center ">
                     <div class="card-header">
-                      Amortization Calculator
+                        Amortization Calculator
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -46,79 +46,83 @@
                                 <p>Loan Amount,<span style="font-weight: bold;font-style: italic;"> P</span></p>
                             </div>
                             <div class="col-6">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">$</span>
-                               
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="principal amount" name="Pa"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
                                 </div>
-                                <input type="text" class="form-control" id="principal amount" name="Pa" aria-label="Dollar amount (with dot and two decimal places)">
-                              </div>
                             </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <p>Interest Rate,<span style="font-weight: bold;font-style: italic;"> r</span></p>
                         </div>
-                        <div class="col-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">%</span>
-                           
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Interest Rate,<span style="font-weight: bold;font-style: italic;"> r</span></p>
                             </div>
-                            <input type="text" class="form-control"  id="rate of interest" name="ra"aria-label="Dollar amount (with dot and two decimal places)">
-                          </div>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <p>No of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
-                    </div>
-                    <div class="col-6">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">in years</span>
-                       
-                        </div>
-                        <input type="text" class="form-control"   id="no of pay" name="No" aria-label="Dollar amount (with dot and two decimal places)">
-                      </div>
-                    </div>
-            </div>
-            <div class="row ">
-                <div class="col-6 mx-auto">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">%</span>
 
-              
-                <input class="btn btn-primary" type="submit"  onclick="Amortization()"value="Submit">
-                </div>
-            </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="rate of interest" name="ra"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>No of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">in years</span>
 
-            </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="no of pay" name="No"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+
+
+                                <input class="btn btn-primary" type="submit" onclick="Amortization()" value="Submit">
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="card-footer ">
                         <div class="row">
                             <div class="col-6">
                                 <p>Interest Rate,<span style="font-weight: bold;font-style: italic;"> r</span></p>
                             </div>
                             <div class="col-6">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">$</span>
-                               
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="result" name="Am"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
                                 </div>
-                                <input type="text" class="form-control"  id="result" name="Am" aria-label="Dollar amount (with dot and two decimal places)">
-                              </div>
                             </div>
+                        </div>
                     </div>
-                    </div>
-                
+
+                </div>
+
             </div>
-     
         </div>
-        </div>
-        
+
         <div class="row pt-3" id="FV" style="display: none;">
-            <div class="col-6 mx-auto">
+            <div class="col-12 mx-auto">
                 <div class="card text-center ">
                     <div class="card-header">
-                    Future Value Calculator
+                        Future Value Calculator
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -126,153 +130,162 @@
                                 <p>Amount,<span style="font-weight: bold;font-style: italic;"> A</span></p>
                             </div>
                             <div class="col-6">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">$</span>
-                               
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="amount" name="Sat"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
                                 </div>
-                                <input type="text" class="form-control"  id="amount" name="Sat"aria-label="Dollar amount (with dot and two decimal places)">
-                              </div>
                             </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <p>Interest Rate,<span style="font-weight: bold;font-style: italic;"> r</span></p>
                         </div>
-                        <div class="col-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">%</span>
-                           
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Interest Rate,<span style="font-weight: bold;font-style: italic;"> r</span></p>
                             </div>
-                            <input type="text" class="form-control" id="rate" name="ra" aria-label="Dollar amount (with dot and two decimal places)">
-                          </div>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <p>No of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
-                    </div>
-                    <div class="col-6">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">in years</span>
-                       
-                        </div>
-                        <input type="text" class="form-control"  id="noofperiods" name="Peo"aria-label="Dollar amount (with dot and two decimal places)">
-                      </div>
-                    </div>
-            </div>
-            <div class="row ">
-                <div class="col-6 mx-auto">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">%</span>
 
-              
-                <input class="btn btn-primary" type="submit" onclick="futurevalue()"value="Submit">
-                </div>
-            </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="rate" name="ra"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>No of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">in years</span>
 
-            </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="noofperiods" name="Peo"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+
+
+                                <input class="btn btn-primary" type="submit" onclick="futurevalue()" value="Submit">
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="card-footer ">
                         <div class="row">
                             <div class="col-6">
                                 <p>Result</span></p>
                             </div>
                             <div class="col-6">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">$</span>
-                               
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="result1" name="re"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
                                 </div>
-                                <input type="text" class="form-control"   id="result1" name="re"aria-label="Dollar amount (with dot and two decimal places)">
-                              </div>
                             </div>
-                    </div>
-                    </div>
-                
-            </div>
-     
-        </div>
-    </div>
-    
-    <div class="row pt-3"   id="CR" style="display: none;">
-        <div class="col-6 mx-auto">
-            <div class="card text-center ">
-                <div class="card-header">
-                 CAGR Calculator
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <p>Beginning Value</p>
                         </div>
-                        <div class="col-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">$</span>
-                           
-                            </div>
-                            <input type="text" class="form-control" id="bvalue" name="Sa" aria-label="Dollar amount (with dot and two decimal places)">
-                          </div>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <p>Ending Value<p>
                     </div>
-                    <div class="col-6">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">$</span>
-                       
-                        </div>
-                        <input type="text" class="form-control"   id="evalue"aria-label="Dollar amount (with dot and two decimal places)">
-                      </div>
-                    </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <p>No of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
-                </div>
-                <div class="col-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">in years</span>
-                   
-                    </div>
-                    <input type="text" class="form-control" id="noperiods" aria-label="Dollar amount (with dot and two decimal places)">
-                  </div>
-                </div>
-        </div>
-        <div class="row ">
-            <div class="col-6 mx-auto">
 
-          
-            <input class="btn btn-primary" type="submit" onclick="cagrcalci()" value="Submit">
+                </div>
+
             </div>
         </div>
 
-        </div>
-                <div class="card-footer ">
-                    <div class="row">
-                        <div class="col-6">
-                            <p>CAGR VALUE</p>
-                        </div>
-                        <div class="col-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">%</span>
-                           
+        <div class="row pt-3" id="CR" style="display: none;">
+            <div class="col-12 mx-auto">
+                <div class="card text-center ">
+                    <div class="card-header">
+                        CAGR Calculator
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Beginning Value</p>
                             </div>
-                            <input type="text" class="form-control"  id="result2" aria-label="Dollar amount (with dot and two decimal places)">
-                          </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="bvalue" name="Sa"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Ending Value
+                                <p>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="evalue"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>No of Payments,<span style="font-weight: bold;font-style: italic;"> n</span></p>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">in years</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="noperiods"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+
+
+                                <input class="btn btn-primary" type="submit" onclick="cagrcalci()" value="Submit">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row">
+                            <div class="col-6">
+                                <p>CAGR VALUE</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">%</span>
+
+                                    </div>
+                                    <input type="text" class="form-control" id="result2"
+                                        aria-label="Dollar amount (with dot and two decimal places)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                </div>
-            
+
+            </div>
         </div>
- 
-    </div>
-</div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
